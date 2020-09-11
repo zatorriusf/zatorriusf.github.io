@@ -1,11 +1,10 @@
-@import url("fontawesome-all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic|Roboto:400,700,900");
 
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  max-width: 960px;
+
   font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
@@ -17,12 +16,16 @@ h3 {
   font-family: Roboto, Arial, Helvetica, sans-serif;
   font-weight: 700;
 }
-
+ul{
+	list-style: none;
+}
 .wrapper {
+  width: 100vw;
+  max-width: 960px;
   display: grid;
   grid-template-rows: auto 1fr auto;
-  margin: 0 3em;
-  width: 100%;
+  padding: 0 3em;
+  margin: 0 auto;
 }
 header {
   display: flex;
@@ -31,9 +34,18 @@ header {
 }
 nav {
   ul {
-    list-style: none;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    li {
+      padding-right: 2em;
+    }
+  }
+}
+a {
+  text-decoration: none;
+  &:hover {
+	color: #55ee33;
+	transform: scale(1.5);
   }
 }

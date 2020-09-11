@@ -1,10 +1,8 @@
-@import url("fontawesome-all.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic|Roboto:400,700,900");
 body {
   margin: 0;
   padding: 0;
-  width: 100vw;
-  max-width: 960px;
   font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
@@ -18,13 +16,19 @@ h3 {
   font-weight: 700;
 }
 
+ul {
+  list-style: none;
+}
+
 .wrapper {
+  width: 100vw;
+  max-width: 960px;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: auto 1fr auto;
       grid-template-rows: auto 1fr auto;
-  margin: 0 3em;
-  width: 100%;
+  padding: 0 3em;
+  margin: 0 auto;
 }
 
 header {
@@ -40,7 +44,6 @@ header {
 }
 
 nav ul {
-  list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,5 +53,19 @@ nav ul {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
+}
+
+nav ul li {
+  padding-right: 2em;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: #55ee33;
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
 }
 /*# sourceMappingURL=main.css.map */
