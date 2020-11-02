@@ -4,7 +4,7 @@
 body {
   margin: 0;
   padding: 0;
-
+  background-color: rgb(207, 207, 207);
   font-family: Lato, Arial, Helvetica, sans-serif;
 }
 
@@ -37,15 +37,40 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+    transition: all .2s ease-in-out;
     li {
       padding-right: 2em;
+      &:hover {
+        transform: scale(1.1);
+        }
     }
   }
 }
-a {
+footer{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    li{
+      padding-right: 2em;
+      font-size: 2em;
+      &:hover {
+        transform: scale(1.1);
+        }
+    }
+  }
+}
+a{
   text-decoration: none;
-  &:hover {
-	color: #55ee33;
-	transform: scale(1.5);
+  color: inherit;
+  &:visited{
+    color: inherit;
+  }
+  &:hover{
+    color: #6521be;
   }
 }
