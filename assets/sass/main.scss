@@ -21,9 +21,11 @@ ul{
 }
 .wrapper {
   width: 100vw;
+  min-width: 360px;
   max-width: 960px;
   display: grid;
   grid-template-rows: auto 1fr auto;
+  grid-template-columns: 1fr;
   padding: 0 3em;
   margin: 0 auto;
 }
@@ -73,4 +75,8 @@ a{
   &:hover{
     color: #6521be;
   }
+}
+main {
+  display: flex;
+  flex-direction: column;
 }
