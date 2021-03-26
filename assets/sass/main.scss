@@ -1,11 +1,19 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:400,400italic|Roboto:400,700,900");
 
+
+*,
+*::before,
+*::after{box-sizing:border-box;
+        }
+
 body {
-  margin: 0;
+  width: 90vw;
+  margin: auto;
   padding: 0;
   background-color: rgb(207, 207, 207);
   font-family: Lato, Arial, Helvetica, sans-serif;
+  display: block;
 }
 
 h1 {
@@ -20,19 +28,21 @@ ul{
 	list-style: none;
 }
 .wrapper {
-  width: 100vw;
-  min-width: 360px;
+  width: 100%;
   max-width: 960px;
-  display: grid;
-  grid-template-rows: auto 1fr auto;
-  grid-template-columns: 1fr;
-  padding: 0 3em;
   margin: 0 auto;
+  display: block;
 }
 header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 825px){
+    flex-direction: column;
+    h1{
+      margin-bottom: 0;
+    }
+  }
 }
 nav {
   ul {
@@ -52,13 +62,13 @@ footer{
   display: flex;
   align-items: center;
   justify-content: space-between;
-  flex-direction: column;
+  width: 100%;
   ul {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 50%;
     li{
-      padding-right: 2em;
       font-size: 2em;
       &:hover {
         transform: scale(1.1);
